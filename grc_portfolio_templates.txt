@@ -1,0 +1,178 @@
+# 🎓 GRC Training Course & GitHub Portfolio Kit
+
+This kit contains your GitHub-ready structure, templates, evaluation guide, and **completed examples** to turn your GRC tasks into a public project portfolio and self-paced course.
+
+---
+
+## 🗂️ GitHub Repo Structure
+
+```
+📁 grc-home-lab-portfolio/
+├── README.md
+├── .gitignore
+├── junior-track/
+│   ├── task-01-inventory-aws.md ✅
+│   ├── task-02-risk-register.md ✅
+│   └── ...
+├── mid-level-track/
+│   ├── task-01-centralized-logs.md ✅
+│   ├── task-02-iso27001-gap.md ✅
+│   └── ...
+├── senior-track/
+│   ├── task-01-nist-assessment.md ✅
+│   ├── task-02-board-presentation.md ✅
+│   └── ...
+├── templates/
+│   ├── incident-report-template.md
+│   ├── risk-register-template.xlsx
+│   ├── policy-template.md
+│   └── audit-log-review-checklist.md
+├── scoring/
+│   ├── junior-track-evaluation.md
+│   ├── mid-track-evaluation.md
+│   └── senior-track-evaluation.md
+└── publish/
+    ├── github-pages-guide.md ✅
+    └── course-roadmap.md ✅
+```
+
+---
+
+## ✅ Included: Completed Example Tasks
+
+### 📘 Junior Example: Inventory AWS Resources
+```markdown
+# Task: Inventory AWS Resources
+**Objective:** List all AWS resources used for ERPNext deployment
+
+## Findings
+| Resource Type | Name                 | Region   | Tags           |
+|---------------|----------------------|----------|----------------|
+| EC2           | erpnext-server       | eu-west-1| env=dev        |
+| RDS           | erpnext-db           | eu-west-1| env=dev        |
+| S3            | erpnext-backups-bckt | eu-west-1| backup=true    |
+
+## Tools Used
+- AWS Console
+- Terraform state inspection
+
+## Evidence
+- `aws_resource_inventory.xlsx`
+```
+
+### 📘 Mid-Level Example: ISO 27001 Gap Assessment
+```markdown
+# Task: ISO 27001 Gap Analysis for ERPNext Lab
+**Objective:** Identify compliance gaps with ISO 27001:2022 controls
+
+## Methodology
+Used OpenGRC to import ISO 27001 and mapped 10 controls to lab setup
+
+## Gaps Found
+- A.5.9 — No defined acceptable use policy (drafted now)
+- A.7.2 — No security awareness training module
+
+## Mitigation Plan
+| Control | Action Plan             | Owner     |
+|---------|-------------------------|-----------|
+| A.5.9   | Publish AUP in Git repo | GRC Lead  |
+| A.7.2   | Create awareness quiz   | Analyst   |
+```
+
+---
+
+## 🌐 Publishing to GitHub Pages
+See `publish/github-pages-guide.md` to:
+- Create GitHub repo from this template
+- Enable GitHub Pages
+- Showcase markdown files as a public portfolio or course
+
+## 🎓 Self-Paced Course
+Use `publish/course-roadmap.md` to:
+- Organize tasks into modules
+- Track student progress
+- Convert this into Udemy, GitBook, or Teachable material
+
+---
+
+## 📄 Template: Incident Report
+
+```markdown
+# Incident Report
+
+**Date:** YYYY-MM-DD  
+**Reported by:** [Your Name]  
+**System Affected:** [System Name]
+
+## Summary
+Brief description of the incident and impact.
+
+## Timeline
+| Time       | Event Description               |
+|------------|----------------------------------|
+| 10:00 UTC  | Unauthorized login detected     |
+| 10:30 UTC  | User access revoked             |
+
+## Root Cause Analysis
+Explain how it happened and contributing factors.
+
+## Mitigation & Response
+List actions taken to stop and fix the issue.
+
+## Lessons Learned
+Short reflection and recommendations.
+```
+
+---
+
+## 📄 Template: GRC Policy (e.g., Acceptable Use)
+
+```markdown
+# Acceptable Use Policy
+
+## Purpose
+To define acceptable behaviors for using company systems and networks.
+
+## Scope
+All users accessing ERPNext, cloud resources, and devices.
+
+## Policy
+- No sharing of admin credentials
+- Enforce MFA for ERPNext admin logins
+- Access restricted to work hours unless authorized
+
+## Enforcement
+Violations may result in account suspension.
+```
+
+---
+
+## 📄 Template: Audit Log Review Checklist
+
+```markdown
+# Audit Log Review Checklist
+
+- [ ] Are all logs centralized in ELK/Wazuh?
+- [ ] Are logins and admin actions recorded?
+- [ ] Have logs been reviewed for anomalies this week?
+- [ ] Any failed login trends?
+- [ ] Are logs protected from tampering?
+```
+
+---
+
+## ✅ Scoring Rubric: Junior Track Evaluation
+
+| Criteria                          | Max Points |
+|----------------------------------|------------|
+| Completed at least 30/40 tasks   | 20         |
+| Documented findings per task     | 20         |
+| Used templates for 5+ policies   | 10         |
+| Maintained GitHub markdown format| 10         |
+| Uploaded screenshots/evidence    | 10         |
+| Created one demo video           | 10         |
+| Wrote reflections or lessons     | 10         |
+| BONUS: Shared repo publicly      | 10         |
+| **Total**                        | **100**    |
+
+(Similar rubrics exist for Mid and Senior tracks.)
